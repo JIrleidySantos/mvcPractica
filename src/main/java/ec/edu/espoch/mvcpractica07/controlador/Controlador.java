@@ -15,28 +15,29 @@ import ec.edu.espoch.mvcpractica07.testerVista.TesterControlador;
 public class Controlador {
     
    private Vista vista;
-   //private TesterControlador testerControlador;
-   
+   private TesterControlador gestorTareas;
+   //cuando hagas conexion quita el commentario de la linea 17 cuando hagas coneccion con el modelo
+   //private GestorTareas modelo;
 
     public Controlador(Vista vista, TesterControlador testerControlador) {
         this.vista = vista;
-        
+        this.gestorTareas=new TesterControlador();
     }
    
     public void agregarTarea(){
         try {
-            TesterControlador testerControlador = new TesterControlador();
+            if (this.vista != null) {    
             Tarea objTarea = new Tarea();
             objTarea.setTitulo(this.vista.getTxtTitulo());
             objTarea.setDescripcion(this.vista.getTxtDescripcion());
             objTarea.setEstado(this.vista.getEstado());
-            
-            if (this.vista != null) {
-                testerControlador.prueba(objTarea);
+            gestorTareas.prueba(objTarea);
+            }else{
+                vista.Error("Completa los datos!");
             }
             
         } catch (Exception e) {
-            
+            vista.Error("Consulta al ing Pedro ;)");
         }
     }
     
