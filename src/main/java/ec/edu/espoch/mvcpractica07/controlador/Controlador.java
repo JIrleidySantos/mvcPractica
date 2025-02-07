@@ -5,6 +5,7 @@
 package ec.edu.espoch.mvcpractica07.controlador;
 
 import ec.edu.espoch.mvcpractica07.Vista.Vista;
+import ec.edu.espoch.mvcpractica07.modelo.Tarea;
 import ec.edu.espoch.mvcpractica07.testerVista.TesterControlador;
 
 /**
