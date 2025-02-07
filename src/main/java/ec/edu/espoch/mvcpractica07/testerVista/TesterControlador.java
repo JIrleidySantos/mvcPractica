@@ -4,10 +4,20 @@
  */
 package ec.edu.espoch.mvcpractica07.testerVista;
 
+import ec.edu.espoch.mvcpractica07.controlador.Controlador;
+
 /**
  *
  * @author mundo
  */
 public class TesterControlador {
+    
+    
+    public void prueba(Tarea objTarea){
+        System.out.println("Titulo: "+ objTarea.getTitulo());
+        System.out.println("Descripcion: "+objTarea.getDescripcion());
+        System.out.println("Estado: "+objTarea.getEstado());
+        
+    }
     
 }

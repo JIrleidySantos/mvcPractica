@@ -14,28 +14,29 @@ import ec.edu.espoch.mvcpractica07.testerVista.TesterControlador;
 public class Controlador {
     
    private Vista vista;
-   private TesterControlador testerControlador;
+   //private TesterControlador testerControlador;
+   
 
     public Controlador(Vista vista, TesterControlador testerControlador) {
         this.vista = vista;
-        this.testerControlador = new TesterControlador();
+        
     }
    
     public void agregarTarea(){
         try {
-            String titulo = this.vista.getTxtTitulo();
-            String descripcion = this.vista.getTxtDescripcion();
-            boolean estado = this.vista.getEstado();
+            TesterControlador testerControlador = new TesterControlador();
+            Tarea objTarea = new Tarea();
+            objTarea.setTitulo(this.vista.getTxtTitulo());
+            objTarea.setDescripcion(this.vista.getTxtDescripcion());
+            objTarea.setEstado(this.vista.getEstado());
             
             if (this.vista != null) {
-                S
+                testerControlador.prueba(objTarea);
             }
             
         } catch (Exception e) {
+            
         }
     }
-   
-   
-   
     
 }
