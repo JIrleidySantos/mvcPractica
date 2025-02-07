@@ -19,7 +19,14 @@ public class TesterVista {
     }
 
     public void prueba() {
-        System.out.println("Titulo" + vista.getTitle());
+        try {
+            System.out.println("Titulo" + vista.getTxtTitulo());
+            System.out.println("Descripcion" + vista.getTxtDescripcion());
+            System.out.println("Estado" + vista.getEstado());
+
+        } catch (NumberFormatException e) {
+
+        }
     }
 
 }
