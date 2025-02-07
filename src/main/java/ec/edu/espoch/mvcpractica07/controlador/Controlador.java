@@ -33,11 +33,11 @@ public class Controlador {
             objTarea.setEstado(this.vista.getEstado());
             gestorTareas.prueba(objTarea);
             }else{
-                vista.Error("Completa los datos!");
+                vista.error("Completa los datos!");
             }
             
         } catch (Exception e) {
-            vista.Error("Consulta al ing Pedro ;)");
+            vista.error("Consulta al ing Pedro ;)");
         }
     }
     
