@@ -5,8 +5,7 @@
 package ec.edu.espoch.mvcpractica07.Vista;
 
 import ec.edu.espoch.mvcpractica07.testerVista.TesterVista;
-import javax.swing.JTextArea;
-import javax.swing.JTextField;
+
 
 /**
  *
@@ -37,7 +36,7 @@ public class Vista extends javax.swing.JFrame {
 
         jRadioButtonMenuItem1 = new javax.swing.JRadioButtonMenuItem();
         buttonGroup1 = new javax.swing.ButtonGroup();
-        jButton1 = new javax.swing.JButton();
+        btnGuardar = new javax.swing.JButton();
         jButton2 = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
@@ -50,7 +49,7 @@ public class Vista extends javax.swing.JFrame {
         lblError = new javax.swing.JLabel();
         jMenuBar1 = new javax.swing.JMenuBar();
         menuCompletas = new javax.swing.JMenu();
-        jMenuItem1 = new javax.swing.JMenuItem();
+        MenuListarTareas = new javax.swing.JMenuItem();
         menuPendiente = new javax.swing.JMenuItem();
         jMenuItem3 = new javax.swing.JMenuItem();
         jMenuItem4 = new javax.swing.JMenuItem();
@@ -61,10 +60,10 @@ public class Vista extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jButton1.setText("Registrar");
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
+        btnGuardar.setText("Registrar");
+        btnGuardar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
+                btnGuardarActionPerformed(evt);
             }
         });
 
@@ -95,8 +94,13 @@ public class Vista extends javax.swing.JFrame {
 
         menuCompletas.setText("Tarea");
 
-        jMenuItem1.setText("Agregar Tarea");
-        menuCompletas.add(jMenuItem1);
+        MenuListarTareas.setText("ListarTareas");
+        MenuListarTareas.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                MenuListarTareasActionPerformed(evt);
+            }
+        });
+        menuCompletas.add(MenuListarTareas);
 
         menuPendiente.setText("Listar Pendiente");
         menuPendiente.addActionListener(new java.awt.event.ActionListener() {
@@ -141,7 +145,7 @@ public class Vista extends javax.swing.JFrame {
                     .addGroup(layout.createSequentialGroup()
                         .addGap(186, 186, 186)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jButton1)
+                            .addComponent(btnGuardar)
                             .addComponent(btnCompleta, javax.swing.GroupLayout.PREFERRED_SIZE, 98, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(layout.createSequentialGroup()
@@ -184,7 +188,7 @@ public class Vista extends javax.swing.JFrame {
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 108, Short.MAX_VALUE)))
                 .addGap(54, 54, 54)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jButton1)
+                    .addComponent(btnGuardar)
                     .addComponent(jButton2))
                 .addGap(22, 22, 22)
                 .addComponent(lblError)
@@ -207,18 +211,17 @@ public class Vista extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton2ActionPerformed
 
     private void menuPendienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_menuPendienteActionPerformed
-        Pendiente objPendientes = new Pendiente();
-        objPendientes.setVisible(true);
-        this.setVisible(false); // TODO add your handling code here:
+        // TODO add your handling code here:
     }//GEN-LAST:event_menuPendienteActionPerformed
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        this.tester.prueba();        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton1ActionPerformed
+    private void btnGuardarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnGuardarActionPerformed
+        this.tester.prueba();// TODO add your handling code here:
+    }//GEN-LAST:event_btnGuardarActionPerformed
 
-    public Pendiente getPendiente() {
-        return pendiente;
-    }
+    private void MenuListarTareasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MenuListarTareasActionPerformed
+        ListarTareas objListarTareas = new ListarTareas();
+        objListarTareas.setVisible(true);         // TODO add your handling code here:
+    }//GEN-LAST:event_MenuListarTareasActionPerformed
 
     public String getTxtDescripcion() {
         return txtDescripcion.toString();
@@ -232,19 +235,22 @@ public class Vista extends javax.swing.JFrame {
         return btnCompleta.isSelected();
     }
 
+    public void error(String text) {
+        lblError.setText(text);
+    }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JMenuItem MenuListarTareas;
     private javax.swing.JRadioButton btnCompleta;
+    private javax.swing.JButton btnGuardar;
     private javax.swing.JRadioButton btnPendiente;
     private javax.swing.ButtonGroup buttonGroup1;
-    private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JMenu jMenu2;
     private javax.swing.JMenuBar jMenuBar1;
-    private javax.swing.JMenuItem jMenuItem1;
     private javax.swing.JMenuItem jMenuItem3;
     private javax.swing.JMenuItem jMenuItem4;
     private javax.swing.JRadioButtonMenuItem jRadioButtonMenuItem1;
