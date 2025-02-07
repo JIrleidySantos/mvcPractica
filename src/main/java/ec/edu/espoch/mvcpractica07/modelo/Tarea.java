@@ -8,14 +8,14 @@ package ec.edu.espoch.mvcpractica07.modelo;
  *
  * @author SO-LAB1-PC28
  */
-public class Modelo {
+public class Tarea {
     
     private int id;
     private String titulo;
     private String descripcion;
     private boolean estado;
 
-    public Modelo(int id, String titulo, String descripcion, boolean estado) {
+    public Tarea(int id, String titulo, String descripcion, boolean estado) {
         this.id = id;
         this.titulo = titulo;
         this.descripcion = descripcion;
