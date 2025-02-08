@@ -15,7 +15,7 @@ public class TesterVista {
     private Vista vista;
 
     public TesterVista(Vista vista) {
-        this.vista = new Vista();
+        this.vista = vista;
     }
 
     public void prueba() {
