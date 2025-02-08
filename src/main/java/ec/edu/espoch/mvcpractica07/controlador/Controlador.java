@@ -5,6 +5,7 @@
 package ec.edu.espoch.mvcpractica07.controlador;
 
 import ec.edu.espoch.mvcpractica07.Vista.Vista;
+import ec.edu.espoch.mvcpractica07.modelo.GestorTareas;
 import ec.edu.espoch.mvcpractica07.modelo.Tarea;
 import ec.edu.espoch.mvcpractica07.testerVista.TesterControlador;
 
@@ -16,8 +17,7 @@ public class Controlador {
     
    private Vista vista;
    private TesterControlador gestorTareas;
-   //cuando hagas conexion quita el commentario de la linea 17 cuando hagas coneccion con el modelo
-   //private GestorTareas modelo;
+   private GestorTareas modelo;
 
     public Controlador(Vista vista, TesterControlador testerControlador) {
         this.vista = vista;
