@@ -19,7 +19,7 @@ public class Controlador {
    private TesterControlador gestorTareas;
    private GestorTareas modelo;
 
-    public Controlador(Vista vista, TesterControlador testerControlador) {
+    public Controlador(Vista vista) {
         this.vista = vista;
         this.gestorTareas=new TesterControlador();
     }

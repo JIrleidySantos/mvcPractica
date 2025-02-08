@@ -7,8 +7,6 @@ package ec.edu.espoch.mvcpractica07.Vista;
 import ec.edu.espoch.mvcpractica07.controlador.Controlador;
 import ec.edu.espoch.mvcpractica07.modelo.GestorTareas;
 
-
-
 /**
  *
  * @author USUARIO
@@ -22,7 +20,7 @@ public class Vista extends javax.swing.JFrame {
 
     public Vista() {
         initComponents();
-        this.tester = new Controlador(this,null );
+        this.tester = new Controlador(this);
     }
 
     private Pendiente pendiente;
