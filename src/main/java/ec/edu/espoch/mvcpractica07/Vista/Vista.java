@@ -4,7 +4,8 @@
  */
 package ec.edu.espoch.mvcpractica07.Vista;
 
-import ec.edu.espoch.mvcpractica07.testerVista.TesterVista;
+import ec.edu.espoch.mvcpractica07.controlador.Controlador;
+
 
 
 /**
@@ -16,11 +17,11 @@ public class Vista extends javax.swing.JFrame {
     /**
      * Creates new form Vista
      */
-    private TesterVista tester;
+    private Controlador tester;
 
     public Vista() {
         initComponents();
-        this.tester = new TesterVista(this);
+        this.tester = new Controlador(this);
     }
 
     private Pendiente pendiente;
@@ -215,7 +216,7 @@ public class Vista extends javax.swing.JFrame {
     }//GEN-LAST:event_menuPendienteActionPerformed
 
     private void btnGuardarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnGuardarActionPerformed
-        this.tester.prueba();// TODO add your handling code here:
+        this.tester.agregarTarea();// TODO add your handling code here:
     }//GEN-LAST:event_btnGuardarActionPerformed
 
     private void MenuListarTareasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MenuListarTareasActionPerformed
@@ -224,7 +225,7 @@ public class Vista extends javax.swing.JFrame {
     }//GEN-LAST:event_MenuListarTareasActionPerformed
 
     public String getTxtDescripcion() {
-        return txtDescripcion.toString();
+        return txtDescripcion.getText();
     }
 
     public String getTxtTitulo() {
